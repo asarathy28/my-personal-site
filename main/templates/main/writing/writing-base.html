@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Writing</title>
+
+    <link rel="stylesheet" href="{% static 'css/master.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/writing.css' %}"/>
+    <link href="https://fonts.googleapis.com/css2?family=Astloch:wght@400;700&family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">
+
+    {% block style %}
+    {% endblock %}
+  </head>
+  <body>
+
+    <header>
+
+      <nav>
+        <ul>
+          <li class="logo">Ajay</li>
+          <li><a href="/home">Home</a></li>
+          <li><a href="/writing">Writing</a></li>
+          <li><a href="/running">Running</a></li>
+          <li><a href="/cs-projects">CS Projects</a></li>
+          <li><a href="/resume">Resume</a></li>
+        </ul>
+      </nav>
+      <div class="website-heading">
+        <h1><span class="page-title">Writing</span></h1>
+      </div>
+    </header>
+
+    {% block page %}
+    {% endblock %}
+    
+    <aside class="side-bar">
+
+    </aside>
+
+  </body>
+</html>

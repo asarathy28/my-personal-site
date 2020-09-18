@@ -1,0 +1,26 @@
+
+.poem-prose {
+  font-style: italic;
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.poem-prose h1 {
+  font-size: 24px;
+  margin-bottom: 1em;
+}
+
+.poem-prose p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  line-height: 1.5em;
+}
+
+.soft-words p {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+.soliloquy {
+  text-indent: 2em;
+}
