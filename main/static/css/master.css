@@ -108,11 +108,15 @@ header nav a:visited:active {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  position: relative;
 
   width: 100%;
-  max-width: 900px;
   margin: 0 auto;
+  /* border: 1px solid black; */
+}
 
+.table-of-contents {
+  width: 100%;
 }
 
 .table-of-contents ul {
@@ -121,7 +125,7 @@ header nav a:visited:active {
   flex-wrap: wrap;
 
   width: 100%;
-  max-width: 900px;
+  max-width: 600px;
   margin: 0 auto;
   /* border: 1px solid black; */
 }
@@ -166,34 +170,6 @@ header nav a:visited:active {
   color: #242e75; /* dark navy */
   /* text-decoration: underline; */
 }
-
-.button:link,
-.button:visited {
-  display: block;
-  text-decoration: none;
-
-  color: #FFF;
-  background-color: #4A90E2;
-  font-weight: bold;
-  padding: 10px;
-  border-radius: 5px;
-  text-align: center;
-
-  margin: 1.8em auto;
-}
-
-.button:hover,
-.button:visited:hover {
-  color: #FFF;
-  background-color: #6AA9F4;
-}
-
-.button:active,
-.button:visited:active {
-  color: #FFF;
-  background-color: #3F7CC4;
-}
-
 
 @media only screen and (min-width: 750px) {
   header nav {

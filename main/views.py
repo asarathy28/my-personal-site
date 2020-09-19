@@ -15,8 +15,7 @@ def running(response):
 def csProjects(response):
     return render(response, "main/cs-projects.html", {})
 
-def resume(response):
-    return render(response, "main/resume.html", {})
+
 
 #writing
 def seenInTheSun(response):
@@ -24,3 +23,12 @@ def seenInTheSun(response):
 
 def softWords(response):
     return render(response, "main/writing/soft-words.html", {})
+
+def browniesAndWhiskey(response):
+    return render(response, "main/writing/brownies-and-whiskey.html", {})
+
+def beyondTheWall(response):
+    return render(response, "main/writing/beyond-the-wall.html", {})
+
+def goneGirl(response):
+    return render(response, "main/writing/gone-girl.html", {})

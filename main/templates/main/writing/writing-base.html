@@ -1,42 +1,31 @@
-<!DOCTYPE html>
+{% extends 'main/base.html' %}
 {% load static %}
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Writing</title>
 
-    <link rel="stylesheet" href="{% static 'css/master.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/writing.css' %}"/>
-    <link href="https://fonts.googleapis.com/css2?family=Astloch:wght@400;700&family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">
+{% block title%}Writing{% endblock %}
 
-    {% block style %}
-    {% endblock %}
-  </head>
-  <body>
+{% block style %}
+  <link rel="stylesheet" href="{% static 'css/writing.css' %}"/>
+{% endblock %}
 
-    <header>
+{% block header %}Writing{% endblock %}
 
-      <nav>
-        <ul>
-          <li class="logo">Ajay</li>
-          <li><a href="/home">Home</a></li>
-          <li><a href="/writing">Writing</a></li>
-          <li><a href="/running">Running</a></li>
-          <li><a href="/cs-projects">CS Projects</a></li>
-          <li><a href="/resume">Resume</a></li>
-        </ul>
-      </nav>
-      <div class="website-heading">
-        <h1><span class="page-title">Writing</span></h1>
-      </div>
-    </header>
+{% block content %}
+  <div class="page">
+  {% block page %}
+  {% endblock %}
 
-    {% block page %}
-    {% endblock %}
-    
-    <aside class="side-bar">
-
-    </aside>
-
-  </body>
-</html>
+  <aside>
+    <nav class="side-bar">
+      <ul>
+        <li class="selected">Poetry</li>
+        <li><a href="/seen-in-the-sun">Seen in the Sun</a></li>
+        <li><a href="/soft-words">Soft Words</a></li>
+        <li><a href="/beyond-the-wall">Beyond the Wall</a></li>
+        <li><a href="/gone-girl">Gone Girl</a></li>
+        <li class="selected">Prose</li>
+        <li><a href="/brownies-and-whiskey">Brownies & Whiskey</a></li>
+      </ul>
+    </nav>
+  </aside>
+  </div>
+{% endblock %}

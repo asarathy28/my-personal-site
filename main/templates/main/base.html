@@ -6,10 +6,9 @@
     <title>{% block title%} {% endblock %}</title>
 
     <link rel="stylesheet" href="{% static 'css/master.css' %}"/>
-    <link href="https://fonts.googleapis.com/css2?family=Astloch:wght@400;700&family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">
-
     {% block style %}
     {% endblock %}
+    <link href="https://fonts.googleapis.com/css2?family=Astloch:wght@400;700&family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">
   </head>
   <body>
 
@@ -18,19 +17,19 @@
       <nav>
         <ul>
           <li class="logo">Ajay Sarathy</li>
-          <li><a href="/home">Home</a></li>
+          <li><a href="/home">About Me</a></li>
           <li><a href="/writing">Writing</a></li>
           <li><a href="/running">Running</a></li>
           <li><a href="/cs-projects">CS Projects</a></li>
-          <li><a href="/resume">Resume</a></li>
+          <li><a href="{% static 'dummy-resume-2020.pdf' %}">Resume</a></li>
         </ul>
       </nav>
       <div class="website-heading">
-        <h1><span class="page-title">{% block header %}Ajay Sarathy{% endblock %}</span></h1>
+        <h1><span class="page-title">{% block header %}{% endblock %}</span></h1>
       </div>
     </header>
 
-    {% block page %}
+    {% block content %}
     {% endblock %}
 
   </body>
