@@ -1,10 +1,41 @@
 {% extends 'main/base.html' %}
+{% load static %}
 
 {% block title %}Home{% endblock %}
 
+{% block style %}
+  <style>
+    .website-heading {
+      background-image: none;
+    }
+
+    body {
+      background-image: url({% static 'css/pink-flowers-hd-image.jpg' %});
+    }
+
+    .footer {
+      padding: 2em;
+    }
+  </style>
+{% endblock %}
 
 {% block header %}About Me{% endblock %}
 
-{% block page %}
+{% block content %}
+<div class="page-container">
+  <div class="page">
+    <h1>Bio Place Holder</h1>
 
+    <p>Je m'appelle Angélica Summer, j'ai 12 ans et je suis canadienne. Il y a 5 ans, ma famille et moi avons déménagé dans le sud de la France. Mon père, Frank Summer, est mécanicien ; il adore les voitures anciennes et collectionne les voitures miniatures.</p>
+
+    <p>Ma mère s'appelle Emilie Summer ; elle est infirmière dans un hôpital non loin de notre maison. Nous avons déménagé en France, parce qu'elle a toujours aimé la culture de ce pays.</p>
+
+    <p>La vie en France est très différente de celle au Canada. Ici, il fait toujours chaud. Chaque dimanche, nous allons à la magnifique plage de Biarritz et nous achetons des glaces après avoir nagé dans la mer.</p>
+
+    <p>Les Français sont très sympathiques et accueillants. Nous parlons français lorsque nous sommes dehors, à l'école ou au marché. Cependant, nous continuons de parler anglais à la maison, car mes parents ne veulent pas que je perde ma langue natale.</p>
+  </div>
+</div>
+<div class="footer">
+
+</div>
 {% endblock %}
