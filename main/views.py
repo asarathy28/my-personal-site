@@ -1,36 +1,47 @@
 from django.shortcuts import render
-from .models import WritingPost
+#from .models import ContactMessage
+from .forms import ContactForm
 
 # Create your views here.
-def home(response):
-    return render(response, "main/home.html", {})
+def home(request):
 
-def writing(response):
+    form = ContactForm()
+
+    if request.method == 'POST':
+        print(request.POST)
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+    context = {'form':form}
+    return render(request, "main/home.html", context)
+
+def writing(request):
     #pieces = WritingPost.objects.get(title="Seen in the Sun")
-    return render(response, "main/writing.html", {}) #{"pieces":pieces})
+    return render(request, "main/writing.html", {}) #{"pieces":pieces})
 
-def running(response):
-    return render(response, "main/running.html", {})
+def running(request):
+    return render(request, "main/running.html", {})
 
-def csProjects(response):
-    return render(response, "main/cs-projects.html", {})
+def csProjects(request):
+    return render(request, "main/cs-projects.html", {})
 
 
 
 #writing
-def seenInTheSun(response):
-    return render(response, "main/writing/seen-in-the-sun.html", {})
+def seenInTheSun(request):
+    return render(request, "main/writing/seen-in-the-sun.html", {})
 
-def softWords(response):
-    return render(response, "main/writing/soft-words.html", {})
+def softWords(request):
+    return render(request, "main/writing/soft-words.html", {})
 
-def browniesAndWhiskey(response):
-    return render(response, "main/writing/brownies-and-whiskey.html", {})
+def browniesAndWhiskey(request):
+    return render(request, "main/writing/brownies-and-whiskey.html", {})
 
-def beyondTheWall(response):
-    return render(response, "main/writing/beyond-the-wall.html", {})
+def beyondTheWall(request):
+    return render(request, "main/writing/beyond-the-wall.html", {})
 
-def goneGirl(response):
-    return render(response, "main/writing/gone-girl.html", {})
+def goneGirl(request):
+    return render(request, "main/writing/gone-girl.html", {})
 
 #running

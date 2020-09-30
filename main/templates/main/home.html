@@ -18,6 +18,20 @@
     .footer {
       padding: 2em;
     }
+
+    h1 {
+      font-family: 'Indie Flower', cursive;
+      text-align: center;
+    }
+
+    hr {
+      margin-top: 3em;
+      margin-bottom: 3em;
+    }
+
+    .line {
+      width: 100%;
+    }
   </style>
 {% endblock %}
 
@@ -26,15 +40,37 @@
 {% block content %}
 <div class="page-container">
   <div class="page">
-    <h1>Bio Place Holder</h1>
 
-    <p>Je m'appelle Angélica Summer, j'ai 12 ans et je suis canadienne. Il y a 5 ans, ma famille et moi avons déménagé dans le sud de la France. Mon père, Frank Summer, est mécanicien ; il adore les voitures anciennes et collectionne les voitures miniatures.</p>
+    <div class="pic">
+      <img src="{% static 'img/ajay-propic-korea.jpg' %}" alt="Avatar">
+    </div>
 
-    <p>Ma mère s'appelle Emilie Summer ; elle est infirmière dans un hôpital non loin de notre maison. Nous avons déménagé en France, parce qu'elle a toujours aimé la culture de ce pays.</p>
+    <h1>Hi, I'm Ajay!</h1>
 
-    <p>La vie en France est très différente de celle au Canada. Ici, il fait toujours chaud. Chaque dimanche, nous allons à la magnifique plage de Biarritz et nous achetons des glaces après avoir nagé dans la mer.</p>
+    <p>I’m a junior at Amherst College, pursuing a B.A. in computer science. Within tech, I have a strong affinity to any discipline that involves creating something new. I’m currently fascinated by topics such as amorphous computing and its intersection with robotics, VR/AR, game programming, and web development. Outside of my academic and professional interests, I’m a competitive runner, hobby writer, and music enthusiast. Take a closer look at my interests: <a href="/running">Running</a>, <a href="/writing">Writing</a>, <a href="/music">Music</a>, <a href="/cs-projects">CS Projects</a>.</p>
 
-    <p>Les Français sont très sympathiques et accueillants. Nous parlons français lorsque nous sommes dehors, à l'école ou au marché. Cependant, nous continuons de parler anglais à la maison, car mes parents ne veulent pas que je perde ma langue natale.</p>
+    <div class="line">
+      <hr>
+    </div>
+
+    <h1>Get In Touch</h1>
+
+    <p>Want to talk about my work and projects? Or just interested in chatting about the latest Arctic Monkeys release? Leave me a message!</p>
+
+    <form class="contact-form" action="" method="post">
+
+      {% csrf_token %}
+
+      <ul class="form-row">
+
+        {{form.as_ul}}
+
+        <li><button type="submit">Send</button></li>
+
+      </ul>
+
+    </form>
+
   </div>
 </div>
 <div class="footer">

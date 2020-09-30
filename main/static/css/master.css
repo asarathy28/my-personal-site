@@ -2,8 +2,12 @@
   font-family: 'Astloch', cursive;
 }
 
-@@font-face {
+@font-face {
   font-family: 'Sorts Mill Goudy', serif;
+}
+
+@font-face {
+  font-family: 'Indie Flower', cursive;
 }
 
 * {
@@ -13,8 +17,9 @@
 }
 
 body {
-  font-weight: 300;
-  font-size: 18px;
+  font-family: 'Sorts Mill Goudy', serif;
+  font-weight: 400;
+  font-size: 24px;
   line-height: 1.8em;
   color: #5D6063;
   background-color: #fdf7ff; /* light light pink */
@@ -32,6 +37,19 @@ p {
   line-height: 1.5em;
 }
 
+p a:link,
+p a:visited {
+  color:  #ad5f84; /* magenta */
+  text-decoration: none;
+}
+
+p a:hover,
+p a:visited:hover,
+p a:active,
+p a:visited:active {
+  color: #242e75; /* dark navy */
+}
+
 em {
   font-style: italic;
 }
@@ -42,6 +60,12 @@ strong {
 
 header {
   text-align: center;
+}
+
+img {
+  max-width: 250px;
+  border-radius: 50%;
+  /*border: 2px solid #242e75; /* dark navy */
 }
 
 header nav {
@@ -65,7 +89,8 @@ header nav li {
   padding-top: .1em;
   padding-bottom: .1em;
   border-bottom: 1px solid #fcf2ff; /* light pink */
-  font-family: 'Sorts Mill Goudy', cursive;
+  /* font-family: 'Sorts Mill Goudy', cursive; */
+  font-size: 18px;
 }
 
 header nav a:link,
@@ -79,7 +104,7 @@ header nav a:visited:hover,
 header nav a:active,
 header nav a:visited:active {
   color: #242e75; /* dark navy */
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .logo {
@@ -122,7 +147,11 @@ header nav a:visited:active {
 }
 
 .page {
-  padding: 4em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 1em;
+  padding-right: 1em;
   padding-top:3em;
   padding-bottom: 2em;
 
@@ -130,6 +159,13 @@ header nav a:visited:active {
   margin: 0 auto;
   background-color: #fdf7ff; /* light light pink */
   /* border: solid 1px red; */
+}
+
+.pic {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 2em;
 }
 
 .table-of-contents {
@@ -188,6 +224,84 @@ header nav a:visited:active {
   /* text-decoration: underline; */
 }
 
+.contact-form {
+  background-color: #F6F7F8;
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+
+  width: 80%;
+  padding: 50px;
+  margin: 0 0 40px 0;
+}
+
+.form-row li {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* border: 1px solid RED; */
+}
+
+.form-row li input[type='text'],
+.form-row li input[type='email'] {
+  background-color: #FFFFFF;
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+  width: 100%;
+  padding: 7px;
+
+  font-family: 'Sorts Mill Goudy', serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #5D6063;
+  /* border: 1px solid BLUE; */
+}
+
+.form-row li label {
+  margin-bottom: 15px;
+  /* border: 1px solid GREEN; */
+}
+
+.form-row li textarea {
+  width: 100%;
+
+  font-family: 'Sorts Mill Goudy', serif;
+  font-weight: 400;
+  color: #5D6063;
+  font-size: 14px;
+
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+
+  min-height: 200px;
+  margin-bottom: 10px;
+  padding: 7px;
+  resize: vertical;
+}
+
+.form-row li button {
+  font-size: 16px;
+  font-weight: bold;
+
+  color: #FFFFFF;
+  background-color: #5995DA;
+
+  border: none;
+  border-radius: 3px;
+
+  padding: 10px 40px;
+  cursor: pointer;
+}
+
+.form-row li button:hover {
+  background-color: #76AEED;
+}
+
+.form-row li button:active {
+  background-color: #407FC7;
+}
+
 @media only screen and (min-width: 750px) {
   header nav {
     padding-left: 2em;
@@ -211,5 +325,34 @@ header nav a:visited:active {
 
   header nav li:nth-of-type(2n) {
     border-left: none;
+  }
+
+  .page {
+    padding: 4em;
+    padding-top:3em;
+    padding-bottom: 2em;
+  }
+
+  .contact-form {
+    width: 600px;
+  }
+
+  .form-row li {
+    flex-direction: row;
+    align-items: flex-start; /* To avoid stretching */
+    margin-bottom: 20px;
+  }
+
+  .form-row li input[type='text'],
+  .form-row li input[type='email']{
+    width: 300px;
+    height: initial;
+  }
+
+  .form-row li label {
+    text-align: right;
+    width: 120px;
+
+    padding-right: 20px;
   }
 }

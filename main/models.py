@@ -3,16 +3,12 @@ from django.db import models
 from django.utils import timezone
 
 
-class WritingPost(models.Model):
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    title = models.CharField(max_length=200)
-    text = models.TextField()
-    created_date = models.DateTimeField(default=timezone.now)
-    published_date = models.DateTimeField(blank=True, null=True)
+class ContactMessage(models.Model):
+    subject = models.CharField(max_length=200)
+    name = models.CharField(max_length=200)
+    email = models.EmailField(max_length=254)
+    message = models.TextField()
+    sent_date = models.DateTimeField(auto_now=True)
 
-    def __str__(self):
-        return self.title
-
-    def printText(self):
-        return self.text
-    
+    def __str__ (self):
+        return self.subject + " from: " + self.name
