@@ -78,6 +78,7 @@ img {
 .pic {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   width: 100%;
   max-width: 250px;
   padding-bottom: 2em;
