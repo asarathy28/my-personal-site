@@ -63,9 +63,17 @@ header {
 }
 
 img {
+  width: 100;
   max-width: 250px;
   border-radius: 50%;
   /*border: 2px solid #242e75; /* dark navy */
+}
+
+.pic {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 2em;
 }
 
 header nav {
@@ -159,13 +167,6 @@ header nav a:visited:active {
   margin: 0 auto;
   background-color: #fdf7ff; /* light light pink */
   /* border: solid 1px red; */
-}
-
-.pic {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding-bottom: 2em;
 }
 
 .table-of-contents {
