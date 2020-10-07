@@ -39,6 +39,12 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['www.ajaysarathy.com','ajaysarathy.com','ajay-sarathy.herokuapp.com', '127.0.0.1']
 
+EMAIL_HOST = 'smtp.zoho.com'
+EMAIL_HOST_USER = 'admin@ajaysarathy.com'
+EMAIL_HOST_PASSWORD = 'Personal$ite'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 # Application definition
 
