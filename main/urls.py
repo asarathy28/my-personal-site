@@ -13,4 +13,6 @@ urlpatterns = [
     path('brownies-and-whiskey/', views.browniesAndWhiskey, name='brownies-and-whiskey'),
     path('beyond-the-wall/', views.beyondTheWall, name='beyond-the-wall'),
     path('gone-girl/', views.goneGirl, name='gone-girl'),
+
+    path('confirmation/', views.confirmation, name='confirmation'),
 ]

@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 #from .models import ContactMessage
 from .forms import ContactForm
+
 
 # Create your views here.
 def home(request):
@@ -12,6 +13,10 @@ def home(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
+            return redirect('confirmation/')
+    else:  # 5
+        # Create an empty form instance
+        form = ContactForm()
 
     context = {'form':form}
     return render(request, "main/home.html", context)
@@ -25,6 +30,9 @@ def running(request):
 
 def csProjects(request):
     return render(request, "main/cs-projects.html", {})
+
+def confirmation(request):
+    return render(request, "main/confirmation.html", {})
 
 
 

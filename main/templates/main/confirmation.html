@@ -1,0 +1,55 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Thank You!{% endblock %}
+
+{% block style %}
+  <style>
+    .website-heading {
+      background-image: none;
+      padding-bottom: 1em;
+    }
+
+    body {
+      background-image: url({% static 'css/pink-flowers-hd-image.jpg' %});
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .footer {
+      padding: 2em;
+    }
+
+    h1 {
+      font-family: 'Indie Flower', cursive;
+      text-align: center;
+      width: 100%;
+    }
+
+    .page-title {
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+      background-color: transparent; /* dark navy */
+    }
+
+  </style>
+{% endblock %}
+
+{% block content %}
+<div class="page-container">
+  <div class="page">
+
+    <h1>Thank You!</h1>
+
+
+    <p>Your message has been sent.</p>
+
+
+  </div>
+</div>
+<div class="footer">
+
+</div>
+{% endblock %}
