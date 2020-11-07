@@ -1,0 +1,29 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Music{% endblock %}
+
+{% block style %}
+  <style>
+    .page-container {
+      background-color: #121212;
+    }
+  </style>
+{% endblock %}
+
+{% block header %}Music{% endblock %}
+
+{% block content %}
+
+
+  <div class="page-container">
+
+      {% for name,  id, image in playlists %}
+
+          <iframe class='playlist' src="https://open.spotify.com/embed/playlist/{{id}}" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+
+
+      {% endfor %}
+
+  </div>
+{% endblock %}

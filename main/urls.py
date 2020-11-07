@@ -6,6 +6,7 @@ urlpatterns = [
     path('home/', views.home, name='home'),
     path('writing/', views.writing, name='writing'),
     path('running/', views.running, name='running'),
+    path('music/', views.music, name='music'),
     path('cs-projects/', views.csProjects, name='cs-prjoects'),
 
     path('seen-in-the-sun/', views.seenInTheSun, name='seen-in-the-sun'),

@@ -4,6 +4,8 @@ from .forms import ContactForm
 from django.core.mail import send_mail
 from django.conf import settings
 from django.template.loader import render_to_string
+from .spotify import User_Music
+
 
 
 # Create your views here.
@@ -45,6 +47,14 @@ def writing(request):
 
 def running(request):
     return render(request, "main/running.html", {})
+
+def music(request):
+    myMusic = User_Music('1216336460')
+
+    #playlists = {'name':myMusic.pl_name, 'id':myMusic.pl_id, 'image':myMusic.pl_image}
+    playlists = zip(myMusic.pl_name, myMusic.pl_id, myMusic.pl_image)
+
+    return render(request, "main/music.html", {'playlists':playlists})
 
 def csProjects(request):
     return render(request, "main/cs-projects.html", {})
