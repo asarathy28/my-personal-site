@@ -17,11 +17,15 @@
 
   <div class="page-container">
 
-      {% for name,  id, image in playlists %}
+      {% for name, id, image in playlists %}
 
-          <iframe class='playlist' src="https://open.spotify.com/embed/playlist/{{id}}" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <div class="playlist-container">
 
+          <img class='playlist-cover' src="{{image}}" alt="{{name}}">
 
+          <iframe class='playlist' src="https://open.spotify.com/embed/playlist/{{id}}" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+        </div>
 
       {% endfor %}
 
