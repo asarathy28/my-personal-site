@@ -84,8 +84,87 @@ header {
   padding-bottom: 2em;
 }
 
+/* header */
+
+.banner  {
+  display: flex;
+  justify-content: center;
+  /* padding-bottom: 10em;*/
+  position: relative;
+  background-color: pink;
+  height: 300px;
+  width: 100%;
+}
+
+.menu {
+  position: absolute;
+  padding-top: .2em;
+  top: 0;
+  left: 0;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.menu li {
+  list-style-type: none;
+  text-align: left;
+  line-height: 1.5em;
+
+  width: 100%;
+  padding-left: 1em;
+  font-size: 18px;
+}
+
+.menu a:link,
+.menu a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.menu a:hover,
+.menu a:visited:hover,
+.menu a:active,
+.menu a:visited:active {
+  color: pink;
+  /* text-decoration: underline; */
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  border-top: 1px white solid;
+  border-bottom: 1px white solid;
+  /* border: 1px white solid; */
+}
+
+.title h1 {
+  font-family: 'Sorts Mill Goudy', serif;
+  white-space: nowrap;
+  color: white;
+  font-size: 55px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.banner img {
+  object-fit: cover;
+  overflow: hidden;
+  with: 100%;
+}
+
+
+
+
+/*
 header nav {
-  background-color: #ad5f84; /* magenta */
+  background-color: #ad5f84; /* magenta
 }
 
 header nav ul {
@@ -104,14 +183,14 @@ header nav li {
   width: 100%;
   padding-top: .1em;
   padding-bottom: .1em;
-  border-bottom: 1px solid #fcf2ff; /* light pink */
-  /* font-family: 'Sorts Mill Goudy', cursive; */
+  border-bottom: 1px solid #fcf2ff; /* light pink
+  /* font-family: 'Sorts Mill Goudy', cursive;
   font-size: 18px;
 }
 
 header nav a:link,
 header nav a:visited {
-  color: #fcf2ff; /* light pink */
+  color: #fcf2ff; /* light pink
   text-decoration: none;
 }
 
@@ -119,10 +198,10 @@ header nav a:hover,
 header nav a:visited:hover,
 header nav a:active,
 header nav a:visited:active {
-  color: #242e75; /* dark navy */
-  /* text-decoration: underline; */
+  color: #242e75; /* dark navy
+  /* text-decoration: underline;
 }
-
+*/
 .logo {
   font-family: 'Astloch', cursive;
   font-weight: 700;
@@ -130,26 +209,23 @@ header nav a:visited:active {
   color: #fcf2ff; /* light pink */
 }
 
+/*
 .website-heading {
   padding-top: 2em;
   padding-bottom: 2em;
-  background-image: url("pink-flowers-hd-image.jpg");
   background-color: transparent;
+  border: black 1px solid;
 }
 
 .website-heading h1 {
   font-family: 'Sorts Mill Goudy', cursive;
   font-size: 50px;
-  color: #fcf2ff; /* light pink */
+  color: #fcf2ff; /* light pink
 }
+*/
 
-.page-title {
-  padding-top: .2em;
-  padding-bottom: .2em;
-  padding-left: .3em;
-  padding-right: .3em;
-  background-color: #242e75; /* dark navy */
-}
+
+/* page */
 
 .page-container {
   display: flex;
@@ -176,6 +252,8 @@ header nav a:visited:active {
   background-color: #fdf7ff; /* light light pink */
   /* border: solid 1px red; */
 }
+
+/* writing */
 
 .table-of-contents {
   width: 100%;
@@ -339,28 +417,19 @@ header nav a:visited:active {
 }
 
 @media only screen and (min-width: 640px) {
-  header nav {
-    padding-left: 2em;
-    padding-right: 2em;
-  }
-  header nav li {
+  .menu li {
     width: auto;
-    padding-top: .3em;
+
     padding-bottom: .3em
     /* border-bottom: none; */
   }
 
+  .menu li:nth-of-type(2n) {
+    border-left: none;
+  }
+
   .logo {
     border-bottom: none;
-  }
-
-  .website-heading {
-    padding-top: 6em;
-    padding-bottom: 6em;
-  }
-
-  header nav li:nth-of-type(2n) {
-    border-left: none;
   }
 
   .page {

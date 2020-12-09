@@ -15,12 +15,11 @@
   </head>
   <body>
 
-    <header>
+    <header class="banner">
 
-      <nav>
+      <nav class="menu">
         <ul>
-          <li class="logo">Ajay Sarathy</li>
-          <li><a href="/home">About Me</a></li>
+          <li class="logo"><a href="/home">Ajay Sarathy</a></li>
           <li><a href="/running">Running</a></li>
           <li><a href="/writing">Writing</a></li>
           <li><a href="/music">Music</a></li>
@@ -28,9 +27,10 @@
           <li><a href="{% static 'ajay-resume-2020-fall.pdf' %}">Resume</a></li>
         </ul>
       </nav>
-      <div class="website-heading">
-        <h1><span class="page-title">{% block header %}{% endblock %}</span></h1>
+      <div class="title">
+        <h1>{% block header %}{% endblock %}</h1>
       </div>
+      <img src="{% static 'img/grey-floral.jpg' %}" alt="floral">
     </header>
 
     {% block content %}

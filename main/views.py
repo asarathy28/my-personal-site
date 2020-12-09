@@ -27,7 +27,8 @@ def home(request):
             context = {'subject':subject, 'message':message, 'name':name, 'email':email}
             template = render_to_string('main/email-temp.html', context)
 
-            send_mail(f'{name} : {subject}', message, settings.EMAIL_HOST_USER, ['saraties2088@gmail.com'], fail_silently=False)
+
+            send_mail(f'{name} : {subject}', template, settings.EMAIL_HOST_USER, ['saraties2088@gmail.com'], fail_silently=False)
 
             send_mail(f'confirmation : {subject}', template, settings.EMAIL_HOST_USER, [request.POST['email']], fail_silently=False)
 
@@ -50,6 +51,7 @@ def running(request):
 
 def music(request):
     myMusic = User_Music('1216336460')
+    #'1216336460'
 
     #playlists = {'name':myMusic.pl_name, 'id':myMusic.pl_id, 'image':myMusic.pl_image}
     playlists = zip(myMusic.pl_name, myMusic.pl_id, myMusic.pl_image)
