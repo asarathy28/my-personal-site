@@ -1,8 +1,19 @@
 import json
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
+import os
+import dotenv
 
-auth_manager = SpotifyClientCredentials(client_id= 'd8fabd82cdc748578eca359605393bd9', client_secret= '8a3fd3de594d49e6a2a54ae3b6ca4a6a')
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+dotenv_file = os.path.join(BASE_DIR, ".env")
+if os.path.isfile(dotenv_file):
+    dotenv.load_dotenv(dotenv_file)
+
+SPOTIFY_ID = os.environ['SPOTIFY_ID']
+SPOTIFY_SECRET = os.environ['SPOTIFY_SECRET']
+
+auth_manager = SpotifyClientCredentials(client_id= SPOTIFY_ID, client_secret= SPOTIFY_SECRET)
 
 
 
