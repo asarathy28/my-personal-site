@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
+import dotenv
 
 sentry_sdk.init(
     dsn="https://63e024a471124ddab7e469809073994f@o455512.ingest.sentry.io/5447168",
@@ -31,8 +32,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
+dotenv_file = os.path.join(BASE_DIR, ".env")
+if os.path.isfile(dotenv_file):
+    dotenv.load_dotenv(dotenv_file)
+
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '&c5moc&v_ag3ozo^q_*bs3g(n3c0w+96-k3==27jkl@2m-^g3o'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
