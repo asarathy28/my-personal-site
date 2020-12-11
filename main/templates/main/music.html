@@ -1,13 +1,10 @@
 {% extends 'main/base.html' %}
+{% load static %}
 
 {% block title %}Music{% endblock %}
 
 {% block style %}
-  <style>
-    .page-container {
-      background-color: #121212;
-    }
-  </style>
+  <link rel="stylesheet" href="{% static 'css/music.css' %}"/>
 {% endblock %}
 
 {% block header %}Music{% endblock %}
@@ -15,15 +12,31 @@
 {% block content %}
 
 
-  <div class="page-container">
+  <div class="album-gallery">
 
       {% for name, id, image in playlists %}
 
-        <div class="playlist-container">
+        {% comment %}<div class="playlist-container">
 
           <img class='playlist-cover' src="{{image}}" alt="{{name}}">
 
           <iframe class='playlist' src="https://open.spotify.com/embed/playlist/{{id}}" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+        </div> {% endcomment%}
+
+        <div class="unit-padding">
+
+          <div class="album-border">
+
+            <div class="album-container">
+
+              <img class='album-cover' src="{{image}}" alt="{{name}}">
+
+              <iframe class='album' src="https://open.spotify.com/embed/playlist/{{id}}" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+            </div>
+
+          </div>
 
         </div>
 

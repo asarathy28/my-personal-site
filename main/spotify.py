@@ -23,7 +23,7 @@ class User_Music():
         self.pl_description = []
 
 
-        self.playlists = self.sp.user_playlists(self.user, limit=12, offset=0) #'1216336460'
+        self.playlists = self.sp.user_playlists(self.user, limit=30, offset=0) #'1216336460'
 
         for i, t in enumerate(self.playlists['items']):
             self.pl_name.append(t['name'])
