@@ -20,4 +20,4 @@ sqlparse==0.3.1
 urllib3==1.25.10
 virtualenv==20.0.34
 whitenoise==5.2.0
-newrelic
+newrelic==n.n.n.n
