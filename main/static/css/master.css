@@ -62,27 +62,6 @@ header {
   text-align: center;
 }
 
-.pic img {
-  height: auto;
-  width: 100%;
-  border-radius: 50%;
-  /*border: 2px solid #242e75; /* dark navy */
-}
-
-.pic-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.pic {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  max-width: 250px;
-  padding-bottom: 2em;
-}
 
 /* header */
 
@@ -310,6 +289,38 @@ header nav a:visited:active {
   color: #242e75; /* dark navy */
   /* text-decoration: underline; */
 }
+
+/* BIO */
+
+.bio {
+  width: 100%;
+  flex-wrap: wrap
+  padding-top: 1em;
+}
+
+.pic img {
+  height: auto;
+  width: 100%;
+  /*border: 2px solid #242e75; /* dark navy */
+}
+
+.pic {
+  float: left;
+  width: 100%;
+  max-width: 300px;
+  margin-right: 20px;
+}
+
+.bio p {
+  font-size: 19px;
+  margin-top: 0;
+}
+
+.bio h1 {
+  padding-top: .1em;
+}
+
+/* Contact Form */
 
 .contact-form {
   background-color: #F6F7F8;
